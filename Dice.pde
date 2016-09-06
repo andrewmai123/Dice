@@ -1,21 +1,33 @@
 void setup()
 {
 	noLoop();
+	size(400,400);
 }
 void draw()
 {
-	//your code here
+	for(int x = 30; x < 400; x = x +50){
+	Die bob = new Die(x,150);
+	bob.roll();
+	bob.show();
+	}
 }
+
 void mousePressed()
 {
 	redraw();
 }
+
 class Die //models one single dice cube
 {
-	//variable declarations here
+	int value;
+	int myX;
+	int myY;
+	
 	Die(int x, int y) //constructor
 	{
-		//variable initializations here
+		value = (int)(Math.random()*6)+1;
+		myX = x;
+		myY = y;
 	}
 	void roll()
 	{
@@ -23,6 +35,9 @@ class Die //models one single dice cube
 	}
 	void show()
 	{
-		//your code here
+		fill(255);
+		rect(myX,myY,50,50,10);
+		fill(0);
+		text(""+value,myX+30,myY+30);
 	}
 }
