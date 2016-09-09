@@ -6,7 +6,7 @@ void setup()
 int sum = 0;
 void draw()
 {
-	background((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
+	background(0,(int)(Math.random()*11),(int)(Math.random()*200)+50);
 	sum = 0;
 	for(int x = 30; x < 350; x = x +100)
 	{
@@ -19,6 +19,7 @@ void draw()
 			sum = sum + bob.value;
 		}
 	}
+	fill(255);
 	textSize(25);
 	text("Sum: "+sum, 150, 315);
 }
@@ -44,7 +45,7 @@ class Die //models one single dice cube
 
 	void show() {
 		
-		fill(255);
+		fill(246,(int)(Math.random()*70)+160,0);
 		rect(myX,myY,50,50,7);
 		fill(0);
 		
