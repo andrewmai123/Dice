@@ -19,9 +19,13 @@ void draw()
 			sum = sum + bob.value;
 		}
 	}
+	
+	
 	fill(255);
 	textSize(25);
 	text(sum, 190, 315);
+
+	
 }
 
 void mousePressed()
@@ -102,4 +106,8 @@ class Die //models one single dice cube
 
 
  
+
+
+
+
 
